@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -e
+
+# Set venv name
+VENV_NAME=".venv"
+
+echo "==> Creating venv"
+uv venv $VENV_NAME
+
+echo "==> Activating venv"
+source $VENV_NAME/bin/activate
+
+echo "==> Installing packages"
+uv pip install -r requirements.txt
+
+echo "==> Creating jupyter kernel"
+python -m ipykernel install --user --name=$VENV_NAME --display-name="Python 3.12 ($VENV_NAME)"
