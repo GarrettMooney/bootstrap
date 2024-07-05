@@ -14,8 +14,7 @@ echo "==> Activating venv"
 source .VENV/bin/activate
 
 echo "==> Installing packages"
-uv pip install ipykernel jupyterlab
-uv pip install -e .
+uv pip install -r requirements.txt
 
 echo "==> Creating jupyter kernel"
 python -m ipykernel install --user --name=.VENV --display-name="Python 3.12 (.VENV)"
