@@ -1,3 +1,10 @@
 # boilerplate
 ipykernel
 jupyterlab
+# etl
+duckdb
+duckdb-engine
+jupysql
+matplotlib
+pyarrow
+toml
